@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements OutputDisplay {
     private RelativeLayout mainView ;
     private WordInput textInputBox ;
     private TextView resultsList ;
+
     private WordFinder wordFinder ;
 
 
@@ -24,8 +25,8 @@ public class MainActivity extends AppCompatActivity implements OutputDisplay {
         setContentView(R.layout.main_layout);
 
         mainView = (RelativeLayout) findViewById(R.id.main_view);
-        resultsList = (TextView) findViewById(R.id.results_list) ;
         textInputBox = (WordInput) findViewById(R.id.text_input_box) ;
+        resultsList = (TextView) findViewById(R.id.results_list) ;
 
 
         wordFinder = new WordFinder(this, this);
@@ -69,5 +70,6 @@ public class MainActivity extends AppCompatActivity implements OutputDisplay {
     public void notifyToUpdateDisplay() {
         String results = Util.convertToString(wordFinder.getSolutionsList()) ;
         resultsList.setText(results) ;
+        updateDisplay() ;
     }
 }

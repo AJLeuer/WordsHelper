@@ -69,7 +69,7 @@ public class Util {
      * @param outArray
      * @param inputStream
      */
-    static void convertToStringArray(ArrayList<String> outArray, InputStream inputStream) {
+    static void convertToStringArray(List<String> outArray, InputStream inputStream) {
 
         Scanner wordScanner = new Scanner(inputStream) ;
 
@@ -80,3 +80,28 @@ public class Util {
         int i = 0 ;//debug code, delete
     }
 }
+
+class Pointer<T> {
+    public T value ;
+
+    public Pointer(T t) {
+        this.value = t ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
